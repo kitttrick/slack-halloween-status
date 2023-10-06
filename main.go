@@ -72,11 +72,11 @@ func (sc *SlackClient) updateStatus(profile Profile) error {
 	return nil
 }
 
-func daysUntilChristmas() int {
+func daysUntilHalloween() int {
 
 	currentTime := time.Now()
-	christmas := time.Date(currentTime.Year(), time.December, 25, 0, 0, 0, 0, currentTime.Location())
-	duration := christmas.Sub(currentTime)
+	halloween := time.Date(currentTime.Year(), time.October, 31, 0, 0, 0, 0, currentTime.Location())
+	duration := halloween.Sub(currentTime)
 	return int(duration.Hours() / 24)
 
 }
@@ -93,9 +93,9 @@ func main() {
 	}
 
 	sc := NewSlackClient(token)
-	days := daysUntilChristmas()
-	statusText := fmt.Sprintf("%d days until Christmas", days)
-	profile := Profile{StatusText: statusText, StatusEmoji: ":christmas_tree:"}
+	days := daysUntilHalloween()
+	statusText := fmt.Sprintf("%d days until Halloween", days)
+	profile := Profile{StatusText: statusText, StatusEmoji: ":halloween_lantern:"}
 
 	if err := sc.updateStatus(profile); err != nil {
 
