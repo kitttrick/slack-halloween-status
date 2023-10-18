@@ -2,7 +2,7 @@
 
 ## Description
 
-In progress
+With my colleague having created the original status updater for a countdown to Christmas, I thought I would see if I could tweak his idea for those of a spookier nature! All credit goes to JayDubyaEey for creating the original, and helping me enormously with my own version. Thanks John!
 
 ## Installation
 
